@@ -14,8 +14,15 @@ BOLD='\033[1m'
 
 clear
 printf "%b\n" "${CYAN}${BOLD}"
-printf "    s4darc\n"
-printf "    Arch Linux Installer v1.0.0\n"
+cat << 'EOF'
+  ____  _  _   ____  _   _ _   _ _ 
+ / ___|| || | |  _ \| | | | |_(_) |
+ \___ \| || |_| | | | | | | __| | |
+  ___) |__   _| |_| | |_| | |_| | |
+ |____/   |_| |____/ \___/ \__|_|_|
+                                   
+    Arch Linux Installer v1.0.0
+EOF
 printf "%b\n\n" "${RC}"
 
 INSTALL_DIR="/root/s4darc"
@@ -66,7 +73,6 @@ download_scripts() {
         done
         
         curl -fsSL "$BASE_URL/s4darc.sh" -o "$INSTALL_DIR/s4darc.sh"
-        curl -fsSL "$BASE_URL/s4dutil" -o "$INSTALL_DIR/s4dutil"
     }
     
     chmod +x "$INSTALL_DIR"/*.sh "$INSTALL_DIR"/scripts/*.sh "$INSTALL_DIR"/tui/*.sh 2>/dev/null || true
@@ -74,25 +80,13 @@ download_scripts() {
     printf "%b\n" "${GREEN}Download complete!${RC}"
 }
 
-# Install command wrappers
-install_commands() {
-    printf "%b\n" "${YELLOW}Installing commands...${RC}"
+# Install command
+install_command() {
+    printf "%b\n" "${YELLOW}Installing command...${RC}"
 
     install -Dm755 "$INSTALL_DIR/s4darc.sh" /usr/local/bin/s4darc
 
-    if [ ! -f "$INSTALL_DIR/s4dutil" ]; then
-        {
-            printf '%s\n' '#!/usr/bin/env bash'
-            printf '%s\n' 'echo "s4dutil has been renamed to s4darc."'
-            printf '%s\n' 'echo "Launching s4darc..."'
-            printf '%s\n' 'exec s4darc "$@"'
-        } > "$INSTALL_DIR/s4dutil"
-        chmod +x "$INSTALL_DIR/s4dutil"
-    fi
-
-    install -Dm755 "$INSTALL_DIR/s4dutil" /usr/local/bin/s4dutil
-
-    printf "%b\n" "${GREEN}Commands installed: s4darc, s4dutil compatibility wrapper${RC}"
+    printf "%b\n" "${GREEN}Command installed: s4darc${RC}"
 }
 
 # Run the main installer
@@ -105,7 +99,7 @@ run_installer() {
 main() {
     check_environment
     download_scripts
-    install_commands
+    install_command
     run_installer
 }
 

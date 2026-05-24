@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-echo "s4dutil has been renamed to s4darc."
-echo "Launching s4darc..."
-exec s4darc "$@"

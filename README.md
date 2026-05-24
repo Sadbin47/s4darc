@@ -1,8 +1,6 @@
 
 # s4darc
 
-> Previously known as s4dutil. The project is now renamed to s4darc.
-
 s4darc is a minimal, interactive installer for Arch Linux. No compiling, no dependencies, no bloat—just pure shell scripts that guide you through a clean, safe, and fast installation, right from the official Live ISO.
 
 <div align="center">
@@ -34,8 +32,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/Sadbin47/s4darc/main/s4darc.
 ```sh
 git clone https://github.com/Sadbin47/s4darc.git
 cd s4darc
-sudo install -Dm755 s4darc.sh /usr/local/bin/s4darc
-s4darc
+./s4darc.sh
 ```
 
 ---
