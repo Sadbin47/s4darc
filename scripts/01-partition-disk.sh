@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Step 1: Partition Disk
+# S4DArc - Step 1: Partition Disk
 # Creates partitions on the target disk (No swap partition - uses swap file)
 
 . "$(dirname "$0")/common.sh"

@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Step 2: Format Partitions
+# S4DArc - Step 2: Format Partitions
 # Creates filesystems on the partitions
 
 . "$(dirname "$0")/common.sh"

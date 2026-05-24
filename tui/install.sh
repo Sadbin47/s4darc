@@ -1,11 +1,11 @@
 #!/bin/sh
-# S4DUtil - Installation Runner Module
+# s4darc - Installation Runner Module
 # Executes installation steps with live progress display
 
 # Run installation
 run_installation() {
     SCRIPTS_DIR="$SCRIPT_DIR/scripts"
-    LOG_FILE="/tmp/s4dutil_install.log"
+    LOG_FILE="/tmp/s4darc_install.log"
     : > "$LOG_FILE"  # Clear log file
 
     steps="00-check-environment.sh
@@ -32,12 +32,7 @@ run_installation() {
     redraw_screen() {
         clear
         printf "\n"
-        printf "    %b███████╗  ██╗  ██╗  ██████╗  ██╗   ██╗ ████████╗ ██╗ ██╗%b\n" "${GRAD1}" "${RC}"
-        printf "    %b██╔════╝  ██║  ██║  ██╔══██╗ ██║   ██║ ╚══██╔══╝ ██║ ██║%b\n" "${GRAD2}" "${RC}"
-        printf "    %b███████╗  ███████║  ██║  ██║ ██║   ██║    ██║    ██║ ██║%b\n" "${GRAD3}" "${RC}"
-        printf "    %b╚════██║  ╚════██║  ██║  ██║ ██║   ██║    ██║    ██║ ██║%b\n" "${GRAD4}" "${RC}"
-        printf "    %b███████║       ██║  ██████╔╝ ╚██████╔╝    ██║    ██║ ██████╗%b\n" "${GRAD5}" "${RC}"
-        printf "    %b╚══════╝       ╚═╝  ╚═════╝   ╚═════╝     ╚═╝    ╚═╝ ╚═════╝%b\n" "${GRAD6}" "${RC}"
+        printf "    %bs4darc%b\n" "${GRAD1}${BOLD}" "${RC}"
         printf "\n"
         printf "    %bArch Linux Installer v1.0%b\n" "${DIM}" "${RC}"
         printf "\n"

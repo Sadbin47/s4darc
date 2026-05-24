@@ -1,6 +1,6 @@
 #!/bin/sh
 # ═══════════════════════════════════════════════════════════════
-#  S4DUtil — Arch Linux Installer
+#  s4darc — Arch Linux Installer
 # ═══════════════════════════════════════════════════════════════
 
 set -e
@@ -10,6 +10,20 @@ set -e
 # ─────────────────────────────────────────────────────────────
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+if [ ! -f "$SCRIPT_DIR/scripts/common.sh" ]; then
+    if [ -f /root/s4darc/scripts/common.sh ] && [ -f /root/s4darc/s4darc.sh ]; then
+        exec /root/s4darc/s4darc.sh "$@"
+    fi
+
+    if ! command -v curl >/dev/null 2>&1; then
+        printf '%s\n' "Error: curl is required to bootstrap s4darc."
+        exit 1
+    fi
+
+    curl -fsSL https://raw.githubusercontent.com/Sadbin47/s4darc/main/install.sh | sh
+    exit $?
+fi
 
 . "$SCRIPT_DIR/scripts/common.sh"
 

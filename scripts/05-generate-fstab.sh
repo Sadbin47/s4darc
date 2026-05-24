@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Step 5: Generate fstab
+# S4DArc - Step 5: Generate fstab
 # Generates the filesystem table
 
 . "$(dirname "$0")/common.sh"

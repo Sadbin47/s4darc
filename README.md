@@ -1,7 +1,9 @@
 
-# S4DUtil: Arch Linux Installation
+# s4darc
 
-S4DUtil is a minimal, interactive installer for Arch Linux. No compiling, no dependencies, no bloat—just pure shell scripts that guide you through a clean, safe, and fast installation, right from the official Live ISO.
+> Previously known as s4dutil. The project is now renamed to s4darc.
+
+s4darc is a minimal, interactive installer for Arch Linux. No compiling, no dependencies, no bloat—just pure shell scripts that guide you through a clean, safe, and fast installation, right from the official Live ISO.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/e93131d5-7b56-4b17-b37d-e2fcf037319b" width="700" />
@@ -9,7 +11,7 @@ S4DUtil is a minimal, interactive installer for Arch Linux. No compiling, no dep
 
 ---
 
-## Why S4DUtil?
+## Why s4darc?
 
 - **Zero Dependencies:** Runs on the vanilla Arch ISO—no extra tools needed.
 - **Interactive:** Step-by-step TUI menus for every stage.
@@ -24,22 +26,23 @@ S4DUtil is a minimal, interactive installer for Arch Linux. No compiling, no dep
 **From the Arch Live ISO:**
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/Sadbin47/s4dutil/main/install.sh | sh
+bash <(curl -fsSL https://raw.githubusercontent.com/Sadbin47/s4darc/main/s4darc.sh)
 ```
 
 **Or clone and run locally:**
 
 ```sh
-git clone https://github.com/Sadbin47/s4dutil.git
-cd s4dutil
-./s4dutil.sh
+git clone https://github.com/Sadbin47/s4darc.git
+cd s4darc
+sudo install -Dm755 s4darc.sh /usr/local/bin/s4darc
+s4darc
 ```
 
 ---
 
 ## What Does It Do?
 
-S4DUtil walks you through:
+s4darc walks you through:
 
 
 1. **Environment Check:** Detects if you’re on the Arch Live ISO, checks internet connectivity, and determines UEFI or BIOS mode.

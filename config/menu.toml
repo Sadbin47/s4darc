@@ -1,8 +1,8 @@
-# S4DUtil Menu Configuration
+# s4darc Menu Configuration
 # This file defines the installation steps
 
 [meta]
-name = "S4DUtil"
+name = "s4darc"
 version = "1.0.0"
 description = "Arch Linux Installer"
 

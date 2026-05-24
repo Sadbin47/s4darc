@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Step 9: Finalize Installation
+# S4DArc - Step 9: Finalize Installation
 # Final cleanup and preparation for reboot
 
 . "$(dirname "$0")/common.sh"

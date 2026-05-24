@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - System Configuration Module
+# S4DArc - System Configuration Module
 # timezone, locale, and keyboard layout selection
 
 # ─────────────────────────────────────────────────────────────

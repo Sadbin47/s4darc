@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Step 7: Setup Users
+# S4DArc - Step 7: Setup Users
 # Creates users and sets passwords
 
 . "$(dirname "$0")/common.sh"

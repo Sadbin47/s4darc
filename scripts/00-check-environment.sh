@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Step 0: Check Environment
+# S4DArc - Step 0: Check Environment
 # Verifies that all requirements are met before installation
 
 . "$(dirname "$0")/common.sh"

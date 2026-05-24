@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Step 6: Configure System
+# S4DArc - Step 6: Configure System
 # Configures timezone, locale, hostname, etc.
 
 . "$(dirname "$0")/common.sh"

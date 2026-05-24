@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Disk Selection Module
+# S4DArc - Disk Selection Module
 # Handles disk selection, filesystem choice, and swap configuration
 
 # Select disk

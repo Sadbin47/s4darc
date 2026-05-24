@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - User Setup Module
+# S4DArc - User Setup Module
 # hostname, root password, and user account creation
 
 # Setup users

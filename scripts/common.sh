@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Common functions for installation scripts
+# S4DArc - Common functions for installation scripts
 # This file is sourced by all installation scripts
 
 set -e

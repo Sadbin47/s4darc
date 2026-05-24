@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Installation Summary Module
+# S4DArc - Installation Summary Module
 # Displays final summary before installation begins
 
 # Show summary

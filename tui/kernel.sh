@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Kernel & Bootloader Selection Module
+# S4DArc - Kernel & Bootloader Selection Module
 
 # Select kernel
 select_kernel() {

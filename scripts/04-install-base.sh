@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Step 4: Install Base System
+# S4DArc - Step 4: Install Base System
 # Installs the base Arch Linux system using pacstrap
 
 . "$(dirname "$0")/common.sh"
@@ -108,7 +108,7 @@ cleanup_pacman_state /mnt
 if ! run_pacstrap_with_retry /mnt $ALL_PACKAGES; then
     cleanup_install_swap "$TEMP_SWAP_FILE"
     error "Failed to install base packages"
-    error "Check the log at /tmp/s4dutil_install.log for details"
+    error "Check the log at /tmp/s4darc_install.log for details"
     exit 1
 fi
 

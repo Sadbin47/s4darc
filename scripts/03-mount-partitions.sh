@@ -1,5 +1,5 @@
 #!/bin/sh
-# S4DUtil - Step 3: Mount Partitions
+# S4DArc - Step 3: Mount Partitions
 # Mounts the partitions to /mnt for installation
 
 . "$(dirname "$0")/common.sh"
